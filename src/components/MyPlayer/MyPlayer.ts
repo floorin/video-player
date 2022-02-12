@@ -12,7 +12,6 @@ export default class MyPlayer extends Vue {
 
     public get storeIndexToPlay():number{
        return this.storeMediaList.mediaFiles.findIndex(file=> file.isPlaying );
-        //return (indexToPlay>-1?`${mediaFilesLocation}/${this.storeMediaList.mediaFiles[indexToPlay].name}`:'');
     }
 
 
@@ -20,9 +19,9 @@ export default class MyPlayer extends Vue {
     @Watch('storeIndexToPlay', { immediate: false, deep: false })
     onStoreIndexToPlayChanged(newVal: number, oldVal: number) {
         const vueInst=this;
-        //const video = document.getElementById('video') as HTMLVideoElement;
         if( newVal>-1){
             vueInst.FileToPlay=`${mediaFilesLocation}/${this.storeMediaList.mediaFiles[vueInst.storeIndexToPlay].name}`
+            vueInst.$refs.video.load();
             vueInst.$refs.video.play();
         }
 

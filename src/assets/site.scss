@@ -1,6 +1,10 @@
 @import "mixins";
 
 body {background-color: #e0e5eb;}
+video {
+  max-width: var(--app-width);
+  height: auto;
+}
 
 .play__btn{
   border-radius: 11px;

@@ -1,6 +1,9 @@
 $small-width: 480px;
 $medium-width: 768px;
 $large-width: 1024px;
+:root {
+  --app-width: 10vw;
+}
 
 $title-color:#788795;
 $label-color:#293845;
@@ -21,6 +24,24 @@ $negative  : #C10015;
 $info      : #e8833a;
 $warning   : #F2C037;
 
+
+@media (max-width: #{$small-width}) {
+  :root {
+    --app-width: 90vw;
+  }
+}
+
+@media (min-width: #{$small-width}) {
+  :root {
+    --app-width: 50vw;
+  }
+}
+
+@media (min-width: #{$large-width}) {
+  :root {
+    --app-width: 50vw;
+  }
+}
 
 @mixin media_small {
   @media (max-width: #{$small-width}) {

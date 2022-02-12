@@ -15,16 +15,17 @@
   box-shadow:  20px 20px 60px #bebebe,
   -20px -20px 60px #ffffff;
   display:flex;
+  min-width: var(--app-width);
   @include media_small {
-
+    padding: 1rem;
   }
 
   @include media_medium {
-
+    padding: 2rem;
   }
 
   @include media_large {
-
+    padding: 2rem;
   }
 }
 </style>

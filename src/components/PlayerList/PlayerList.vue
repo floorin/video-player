@@ -16,20 +16,17 @@
   background: #e0e0e0;
   box-shadow: inset 5px 5px 10px #cecece,
   inset -5px -5px 10px #f2f2f2;
-
+  min-width: var(--app-width);
   @include media_small {
     padding: 1rem;
-    width: clamp(20rem, 50vw, 40rem);
   }
 
   @include media_medium {
     padding: 2rem;
-    width: clamp(20rem, 50vw, 40rem);
   }
 
   @include media_large {
     padding: 2rem;
-    width: clamp(20rem, 50vw, 40rem);
   }
 }
 
