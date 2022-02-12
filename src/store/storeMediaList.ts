@@ -18,12 +18,9 @@ export default class storeMediaList extends VuexModule {
 
     @Mutation
     public SET_FILE_TO_PLAY(fileName: string) {
-        //this.mediaFiles=[];
-        console.log('start SET_FILE_TO_PLAY')
         this.mediaFiles=this.mediaFiles.map(file=>{
             return {name: file.name, type:file.type, isPlaying:fileName === file.name};
         })
-        console.log('end SET_FILE_TO_PLAY this.mediaFiles=%o',this.mediaFiles)
     }
     @Action
     public set_file_to_play(fileName:string) {

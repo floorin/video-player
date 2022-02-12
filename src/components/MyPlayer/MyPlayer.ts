@@ -19,7 +19,6 @@ export default class MyPlayer extends Vue {
 
     @Watch('storeIndexToPlay', { immediate: false, deep: false })
     onStoreIndexToPlayChanged(newVal: number, oldVal: number) {
-        console.log('onFileNameToPlayChanged')
         const vueInst=this;
         //const video = document.getElementById('video') as HTMLVideoElement;
         if( newVal>-1){

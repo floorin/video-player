@@ -9,7 +9,6 @@ export default class PlayerList extends Vue {
 
     private playFile(fileNameToPlay:string){
         const indexToPlay = this.mediaList.findIndex(file=> file.name === fileNameToPlay )
-        console.log('indexToPlay=%o, for fileNameToPlay=%o',indexToPlay, fileNameToPlay)
         if(indexToPlay>=0){
                     this.mediaList[indexToPlay].isPlaying=true;
                         this.storeMediaList.set_file_to_play(fileNameToPlay)
@@ -27,7 +26,6 @@ export default class PlayerList extends Vue {
     */
 
     public created(): void {
-        console.log('create PlayerList')
         this.mediaList = [...this.storeMediaList.mediaFiles];
     }
 
