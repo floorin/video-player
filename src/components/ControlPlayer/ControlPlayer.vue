@@ -15,6 +15,7 @@
   box-shadow:  20px 20px 60px #bebebe,
   -20px -20px 60px #ffffff;
   display:flex;
+  justify-content: center;
   min-width: var(--app-width);
   @include media_small {
     padding: 1rem;
