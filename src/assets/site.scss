@@ -1,0 +1,38 @@
+@import "mixins";
+
+body {background-color: #e0e5eb;}
+
+.play__btn{
+  border-radius: 11px;
+  background: #e0e0e0;
+  box-shadow:  6px 6px 11px #bebebe,
+  -6px -6px 11px #ffffff;
+
+  @include media_small {
+    padding: 1rem;
+    margin:2rem;
+  }
+
+  @include media_medium {
+    padding: 1rem;
+    margin:1rem;
+  }
+
+  @include media_large {
+    padding: 1rem;
+    margin:1rem;
+  }
+}
+
+.play__btn--arrow{
+  cursor: pointer;
+  @include media_small {
+    font-size:1rem;
+  }
+  @include media_medium {
+    font-size:2rem;
+  }
+  @include media_large {
+    font-size:2rem;
+  }
+}
